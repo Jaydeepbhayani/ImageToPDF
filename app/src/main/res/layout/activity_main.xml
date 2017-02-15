@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -11,20 +11,40 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Convert Image to PDF!!"
-        android:textSize="20dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/text"/>
+        android:text="Convert Image to PDF!!"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/et_pages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:hint="enter your page number" />
+
+    <Spinner
+        android:id="@+id/sp_orientation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_pages"></Spinner>
+
+    <Spinner
+        android:id="@+id/sp_page_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sp_orientation"></Spinner>
+
     <Button
+        android:id="@+id/converter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CONVERT"
-        android:textAllCaps="false"
-        android:fontFamily="sans-serif-thin"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:id="@+id/converter"
-        />
+        android:fontFamily="sans-serif-thin"
+        android:text="CONVERT"
+        android:textAllCaps="false" />
+
 </RelativeLayout>
